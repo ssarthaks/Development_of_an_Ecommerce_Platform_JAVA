@@ -1,0 +1,122 @@
+@charset "ISO-8859-1";
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Override Bootstrap's box-sizing property */
+*,
+*::before,
+*::after {
+    box-sizing: content-box !important;
+}
+
+.register-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Center horizontally */
+    width: 80%; /* Adjust width for larger screens */
+    max-width: 600px; /* Limit maximum width */
+}
+
+h2 {
+    margin: 0 !important;
+    text-align: center;
+    margin-bottom: 20px !important;
+}
+
+.input-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -12px;
+    left: 5px;
+    font-size: 12px;
+    color: #333;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 30px;
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.register-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.register-link a {
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.register-link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.double {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust layout for tablets */
+    .register-container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjust layout for mobile devices */
+    .register-container {
+        padding: 10px;
+    }
+
+    .input-label {
+        font-size: 10px;
+    }
+}
